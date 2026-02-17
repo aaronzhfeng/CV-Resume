@@ -1,0 +1,377 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages and styling copied from the original RenderCV template.  These
+% settings provide the fonts, colors and custom environments used to
+% structure entries throughout the document.
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+% Primary colour: black for a clean professional look
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Zhaoxiang (Aaron) Feng's CV},
+    pdfauthor={Zhaoxiang Feng},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure machine readability
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+\usepackage{charter}
+
+% Page and section formatting
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=0 cm + 10pt]}{\end{itemize}}
+\newenvironment{highlightsforbulletentries}{\begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt]}{\end{itemize}}
+\newenvironment{onecolentry}{\begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}}{\end{adjustwidth}}
+\newenvironment{twocolentry}[2][]{\onecolentry \def\secondColumn{#2} \setcolumnwidth{\fill, 4.5 cm} \begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn \end{paracol} \endonecolentry}
+
+\newenvironment{header}{\setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}}{\par\kern\topsep}
+
+% Last updated text in the top right corner
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(\LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},\LenToUnit{\paperheight-1.0 cm}){\vtop{\null\makebox[0pt][c]{\small\color{gray}\textit{Last updated in October 2025}}}}%
+  }%
+}
+
+% Save original href for custom link formatting
+\let\hrefWithoutArrow\href
+% Redefine href to remove arrow icons
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{#2}}
+
+\begin{document}
+    % Draw the last updated text on each page
+    \placelastupdatedtext
+
+    % Header with personal information
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Zhaoxiang (Aaron) Feng}
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Del Mar, CA} \kern 5 pt \AND
+        \mbox{\hrefWithoutArrow{mailto:zhf004@ucsd.edu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}zhf004@ucsd.edu}} \kern 5 pt \AND
+        \mbox{\hrefWithoutArrow{tel:+13363377139}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}(336)\,337\,7139}} \kern 5 pt \AND
+        \mbox{\hrefWithoutArrow{https://github.com/aaronzhfeng}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}aaronzhfeng}} \kern 5 pt \AND
+        \mbox{\hrefWithoutArrow{https://zhf004.github.io}{\color{black}{\footnotesize\faGlobe}\hspace*{0.13cm}zhf004.github.io}}
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    % Education
+    \section{Education}
+
+    \begin{twocolentry}{\textit{Sept.\,2022 -- Jun.\,2026 (expected)}}
+        \textbf{University of California, San Diego (UCSD)}
+
+        \textit{B.S. in Data Science \& B.S. in Probability \& Statistics}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item GPA: 3.83 (Major GPAs: 3.94 in Data Science, 3.93 in Statistics)
+            \item Honors: Provost Honors (multiple quarters)
+            \item Graduate-level Coursework: DSC\,291 (Topics in Data Science), MATH\,287C (Advanced Time Series Analysis), DSC\,240 (Machine Learning), MATH\,282B (Applied Statistics\,II), MATH\,287A (Time Series Analysis), MATH\,278C (Seminar in Optimization), MATH\,282A (Applied Statistics\,I)
+            \item Relevant Coursework: Machine Learning, Deep Learning, Natural Language Processing, Mathematical Statistics, Stochastic Processes, Data Management, Linear Algebra, Analysis
+        \end{highlights}
+    \end{onecolentry}
+
+    % Publication
+    \section{Publication}
+
+    \begin{onecolentry}
+        \textbf{ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory} \\
+        \textit{Matthew Ho, Chen Si, Zhaoxiang Feng, Fangxu Yu, Yichi Yang, Zhijian Liu, Zhiting Hu, Lianhui Qin}. International Conference on Learning Representations (ICLR), 2026 (to appear). \\
+        \href{ArcMemo_ICLR.pdf}{Paper} \\
+        ArcMemo introduces a concept-level memory framework for large language models. By distilling reusable abstractions from reasoning traces, it enables continual learning and significantly outperforms strong no-memory baselines on the ARC-AGI benchmark.
+    \end{onecolentry}
+
+    % Research Experience
+    \section{Research Experience}
+
+    % Q-lab Research Assistant
+    \begin{twocolentry}{\textit{Jan.\,2025 -- Present}}
+        \textbf{Q-lab}\newline
+        \textit{Research Assistant}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed \emph{ArcMemo}, a lifelong memory module for large language model reasoning. Built a pipeline to extract and abstract concepts from solution traces and integrate them into prompts, enabling continual improvement across tasks.
+            \item Evaluated ArcMemo on the ARC‑AGI benchmark; achieved a substantial performance improvement over a strong no‑memory baseline and demonstrated that performance scales with additional inference compute.
+            \item Designed dynamic feature detection routines and helper functions to generate transformation hints for compositional puzzles, and optimized asynchronous workflows for efficient model evaluation.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    % U.S. Immigration Policy Center
+    \begin{twocolentry}{\textit{Sept.\,2023 -- Jun.\,2024}}
+        \textbf{U.S. Immigration Policy Center}\newline
+        \textit{Research Assistant}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Utilized Python and R to analyze historical naturalization data and forecast long‑term immigration trends, informing policy briefs for the 2024 election cycle.
+            \item Developed reproducible data pipelines and visualization dashboards to communicate findings to non‑technical stakeholders.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    % Wang Lab
+    \begin{twocolentry}{\textit{Jun.\,2025 -- Present}}
+        \textbf{Wang Lab}\newline
+        \textit{Student Researcher}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Working on computational chemistry projects exploring graph neural networks and transformer models; details forthcoming.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    % HDSI Student Researcher – Hao Zhang
+    \begin{twocolentry}{\textit{Sept.\,2025 -- Present}}
+        \textbf{Halıcıo\u{g}lu Data Science Institute, UC San Diego}\newline
+        \textit{Student Researcher — Advisor: Prof. Hao Zhang}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Senior Capstone: “Open LLM Training, Inference, and Infrastructure” (ongoing). Building scalable pipelines for training open‑source large language models, benchmarking inference frameworks, and exploring alignment strategies.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    % HDSI Student Researcher – Tian Ma
+    \begin{twocolentry}{\textit{Sept.\,2025 -- Present}}
+        \textbf{Halıcıo\u{g}lu Data Science Institute, UC San Diego}\newline
+        \textit{Student Researcher — Advisor: Prof. Tian Ma}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Senior Capstone: “Quantifying the credibility of large language model outputs” (ongoing). Investigating metrics and algorithms to measure factual consistency and reliability in LLM responses.
+        \end{highlights}
+    \end{onecolentry}
+
+    % Teaching Experience
+    \section{Teaching Experience}
+
+    % Fall 2024
+    \begin{twocolentry}{\textit{Fall 2024}}
+        \textbf{Reader — MATH 180C: Introduction to Stochastic Processes II}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Graded problem sets and exams, ensuring detailed feedback on Markov chains and stochastic calculus topics.
+            \item Held weekly office hours to clarify course material and support student comprehension.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Winter 2025
+    \begin{twocolentry}{\textit{Winter 2025}}
+        \textbf{Reader — MATH 185: Introduction to Computational Statistics}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Evaluated programming assignments and exams covering statistical simulation, Monte Carlo methods, and estimation techniques.
+            \item Collaborated with instructors to provide clarifications on computational projects.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Spring 2025 MATH 180C
+    \begin{twocolentry}{\textit{Spring 2025}}
+        \textbf{Reader — MATH 180C: Introduction to Stochastic Processes II}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Provided detailed feedback on assignments focusing on Poisson processes and discrete‑time martingales.
+            \item Assisted with exam proctoring and maintained grade records.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Spring 2025 MATH 181A
+    \begin{twocolentry}{\textit{Spring 2025}}
+        \textbf{Reader — MATH 181A: Introduction to Mathematical Statistics I}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Graded problem sets and exams on estimation, hypothesis testing, and confidence intervals.
+            \item Supported the instructor by addressing student questions via discussion forums.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Summer Session I 2025
+    \begin{twocolentry}{\textit{Summer Session I 2025}}
+        \textbf{Tutor — DSC 40A: Theoretical Foundations of Data Science I}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Conducted tutoring sessions covering set theory, probability, and algorithmic thinking for early‑career data science students.
+            \item Led review sessions and prepared supplementary materials to aid student learning.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Summer Session II 2025
+    \begin{twocolentry}{\textit{Summer Session II 2025}}
+        \textbf{Reader — MATH 181A: Introduction to Mathematical Statistics I}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Assisted with grading and feedback for advanced statistical inference coursework.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Fall 2025
+    \begin{twocolentry}{\textit{Fall 2025}}
+        \textbf{Reader — MATH 180A: Introduction to Probability (Sections B00 \& C00)}\newline
+        University of California, San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Managed grading for two lecture sections, covering probability spaces, random variables, and limit theorems.
+            \item Provided consultation during office hours on problem‑solving strategies.
+        \end{highlights}
+    \end{onecolentry}
+
+    % Selected Projects
+    \section{Selected Projects}
+
+    % 3D-Enhanced Graph Reaction Prediction
+    \begin{twocolentry}{\textit{\href{https://aaronzhfeng.github.io/projects/3d-enhanced-graph-reaction}{3D‑Enhanced Graph Reaction Prediction}}}
+        \textbf{3D‑Enhanced Graph Reaction Prediction}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Designed a graph neural network for reaction outcome prediction combining 2D molecular graph encoders with 3D geometry‑aware message passing via a contrastive InfoNCE objective.
+            \item Pre‑trained 2D and 3D encoders on the QM9 dataset to infuse spatial knowledge and fine‑tuned on the Open Reaction Database (ORD); observed that incorporating 3D features improves representations for stereochemically constrained reactions.
+            \item Integrated the graph encoder with an LSTM decoder to generate product SMILES, demonstrating improved accuracy on reactions with significant geometric constraints.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    % ChemTransformer
+    \begin{twocolentry}{\textit{\href{https://aaronzhfeng.github.io/projects/chemtransformer}{ChemTransformer}}}
+        \textbf{ChemTransformer}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built a transformer‑based sequence‑to‑sequence model for chemical reaction prediction, leveraging SMILES and SELFIES tokenization and novel compound‑based relative positional encodings.
+            \item Explored multiple model configurations on the Open Reaction Dataset (ORD) and found that traditional token‑level positional encoding outperformed compound‑level variants, while SELFIES improved output validity.
+            \item Achieved competitive sequence‑level accuracy despite training challenges, highlighting the potential of transformer architectures for large‑scale reaction prediction.
+        \end{highlights}
+    \end{onecolentry}
+
+    % Honors & Awards
+    \section{Honors \& Awards}
+
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Provost Honors (Fall 2022 – Spring 2025)
+            \item Conference Travel Funding — Halıcıo\u{g}lu Data Science Institute (Jul. 2025)
+            \item Conference Travel Support — Sixth College at UC San Diego (Jul. 2025)
+        \end{highlights}
+    \end{onecolentry}
+
+    % Technical Skills
+    \section{Technical Skills}
+
+    \begin{onecolentry}
+        \textbf{Languages/Frameworks:} Python, Java, R, SQL, JavaScript, HTML \\
+        \textbf{ML \& Data Tools:} PyTorch, scikit‑learn, Pandas, Dask, Spark, AWS \\
+        \textbf{NLP/LLM:} Transformers, LLM fine‑tuning, retrieval‑augmented generation, agent building, GraphRAG, OpenAI/Anthropic APIs (sync/async requests) \\
+        \textbf{Systems/Tooling:} Distributed training, Weights \& Biases, Docker, Linux, SSH
+    \end{onecolentry}
+
+\end{document}

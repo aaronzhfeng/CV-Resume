@@ -1,0 +1,232 @@
+\documentclass[10pt, letterpaper]{article}
+
+%------------------------------------------------------------------------------
+%  CMU MIIS Resume - Research-focused, URLs at bottom
+%------------------------------------------------------------------------------
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.5 cm,
+    bottom=1.5 cm,
+    left=1.5 cm,
+    right=1.5 cm,
+    footskip=0.8 cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Zhaoxiang (Aaron) Feng's Resume},
+    pdfauthor={Zhaoxiang Feng},
+    colorlinks=true,
+    linkcolor=primaryColor,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+\fi
+
+%------------------------------------------------------------------------------
+%  Layout settings
+%------------------------------------------------------------------------------
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.20 cm}{0.15 cm}
+
+\renewcommand\labelitemi{$\circ$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.06 cm,
+        parsep=0.06 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\newcommand{\AND}{\unskip\enspace\textbar\enspace}
+
+\begin{document}
+
+    %--------------------------------------------------------------------------
+    %  Header
+    %--------------------------------------------------------------------------
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Zhaoxiang (Aaron) Feng}
+
+        \vspace{0.25 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}San Diego, CA}%
+        \kern 0.25 cm\AND\kern 0.25 cm%
+        \mbox{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}\href{mailto:zhf004@ucsd.edu}{zhf004@ucsd.edu}}%
+        \kern 0.25 cm\AND\kern 0.25 cm%
+        \mbox{{\footnotesize\faPhone*}\hspace*{0.13cm}\href{tel:+13363377139}{(336)\,337-7139}}%
+        \kern 0.25 cm\AND\kern 0.25 cm%
+        \mbox{{\footnotesize\faGithub}\hspace*{0.13cm}\href{https://github.com/aaronzhfeng}{aaronzhfeng}}%
+        \kern 0.25 cm\AND\kern 0.25 cm%
+        \mbox{{\footnotesize\faGlobe}\hspace*{0.13cm}\href{https://aaronzhfeng.github.io}{aaronzhfeng.github.io}}%
+    \end{header}
+
+    \vspace{0.15 cm}
+
+    %--------------------------------------------------------------------------
+    %  Education
+    %--------------------------------------------------------------------------
+    \section{Education}
+
+    \begin{twocolentry}{\textit{Sept.\,2022 -- Jun.\,2026 (expected)}}
+        \textbf{University of California San Diego (UCSD)}
+
+        \textit{B.S. in Data Science \& B.S. in Probability \& Statistics}
+    \end{twocolentry}
+
+    \vspace{0.06 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item GPA: 3.83 (Major GPAs: 3.94 in Data Science, 3.93 in Statistics)
+            \item Honors: Provost Honors (multiple quarters)
+            \item Graduate Coursework: Advanced Time Series Analysis, Machine Learning, Applied Statistics, Privacy-sensitive Data Systems
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Publications
+    %--------------------------------------------------------------------------
+    \section{Publications}
+    
+    \begin{onecolentry}
+        {[1]} Matthew Ho, Chen Si, \textbf{Zhaoxiang Feng}, Fangxu Yu, Yichi Yang, Zhijian Liu, Zhiting Hu, Lianhui Qin. ``ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory.'' \hfill [\href{https://arxiv.org/abs/2509.04439}{paper}] [\href{https://github.com/matt-seb-ho/arc\_memo}{code}]\\
+        \textit{Under review at International Conference on Learning Representations (ICLR)}, 2026.\\
+        \textit{\href{https://arcprize.org/blog/arc-prize-2025-results-analysis}{\textbf{Runner Up}}, ARC Prize 2025 Paper Awards (\$2,500) --- Top 8 of 90 paper submissions.}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    \begin{onecolentry}
+        {[2]} \textbf{Zhaoxiang Feng}, David Scott Lewis, Enrique Zueco. ``LabMemo: Concept-Level Memory for Autonomous Scientific Discovery.'' \hfill [\href{https://github.com/aaronzhfeng/lab\_memo/blob/main/paper/LabMemo\_Paper.pdf}{paper}] [\href{https://github.com/aaronzhfeng/lab\_memo}{code}]\\
+        \textit{Accepted at IEEE IROS 2025 Workshop on Embodied AI and Robotics for Future Scientific Discovery (AIR4S)}, 2025.
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Research Experience
+    %--------------------------------------------------------------------------
+    \section{Research Experience}
+
+    % Q-Lab
+    \begin{twocolentry}{Jan. 2025 -- Present}
+        \textbf{Research Assistant | Q-Lab, UC San Diego}\\
+        \textit{Advisors: Prof. Lianhui Qin and Matthew Ho}
+    \end{twocolentry}
+    \vspace{0.06 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Led design of program-synthesis-style memory ontology for ArcMemo, developing many-to-one puzzle-to-feature mappings and concept parameterizations for concept-level reasoning.
+            \item Engineered reasoning-based retrieval mechanism achieving 7.5\% relative gain on ARC-AGI-1 (59.33\% official score); extended framework to AIME math problems with 9.3\% accuracy improvement.
+            \item Built complete concept dataset generation pipeline transforming hand-written concepts into validated helper puzzles through multi-stage LLM-based generation and automated testing.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.12 cm}
+
+    % Wang Lab
+    \begin{twocolentry}{Jun. 2025 -- Present}
+        \textbf{Research Assistant | Wang Lab, UC San Diego}\\
+        \textit{Advisors: Prof. Wei Wang and Young Su Ko}
+    \end{twocolentry}
+    \vspace{0.06 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developing ProteinAgent: agentic framework orchestrating domain tools (AlphaFold, MD simulations) using concept-level memory to guide protein stability analysis protocols.
+            \item Architected heterogeneous Mixture-of-Experts system for chemical reaction prediction, integrating graph-based, SMILES, 3D geometry-aware, and condition-aware expert models on USPTO datasets.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.12 cm}
+
+    % HDSI Capstone
+    \begin{twocolentry}{Sep. 2025 -- Present}
+        \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
+        \textit{Advisor: Prof. Hao Zhang}
+    \end{twocolentry}
+    \vspace{0.06 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Senior Capstone: Building scalable pipelines for open-source LLM training, inference benchmarking, and alignment strategies.
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Teaching Experience
+    %--------------------------------------------------------------------------
+    \section{Teaching Experience}
+
+    \begin{twocolentry}{\textit{Summer 2025}}
+        \textbf{Tutor --- DSC 40A: Theoretical Foundations of Data Science I}\\
+        \textit{University of California San Diego}
+    \end{twocolentry}
+    \vspace{0.06 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Conducted tutoring sessions covering probability and algorithmic thinking; led review sessions and supervised oral exams.
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Technical Skills
+    %--------------------------------------------------------------------------
+    \section{Technical Skills}
+
+    \begin{onecolentry}
+        \textbf{Languages \& Frameworks:} Python, PyTorch, PyTorch Geometric, Transformers, scikit-learn, R, SQL, Java\\[2pt]
+        \textbf{LLM/ML:} OpenAI APIs, LLM fine-tuning (PPO, DPO), RAG systems, memory-augmented LLMs, reasoning-based retrieval, vision-language models, prompt engineering\\[2pt]
+        \textbf{Infrastructure:} AWS, Docker, distributed training, Git/GitHub, Linux, vector databases
+    \end{onecolentry}
+
+\end{document}
+

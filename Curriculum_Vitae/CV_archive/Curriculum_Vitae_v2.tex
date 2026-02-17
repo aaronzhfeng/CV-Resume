@@ -1,0 +1,351 @@
+\documentclass[10pt, letterpaper]{article}
+
+%------------------------------------------------------------------------------
+%  This file contains Zhaoxiang (Aaron) Feng's curriculum vitae rendered using
+%  the RenderCV style.
+%------------------------------------------------------------------------------
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm,      % separation between body and page edge from the top
+    bottom=2 cm,   % separation between body and page edge from the bottom
+    left=2 cm,     % separation between body and page edge from the left
+    right=2 cm,    % separation between body and page edge from the right
+    footskip=1.0 cm % separation between body and footer
+    % showframe % uncomment for debugging layout
+]{geometry}
+\usepackage{titlesec}        % customize section titles
+\usepackage{tabularx}        % fixed width tables
+\usepackage{array}           % required by tabularx
+\usepackage[dvipsnames]{xcolor} % color support
+\definecolor{primaryColor}{RGB}{0, 79, 144} % RenderCV primary colour
+\usepackage{enumitem}        % list customisation
+\usepackage{fontawesome5}    % icon fonts
+\usepackage{amsmath}         % mathematics support
+\usepackage[
+    pdftitle={Zhaoxiang (Aaron) Feng's CV},
+    pdfauthor={Zhaoxiang Feng},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}                  % hyperlinks and PDF metadata
+\usepackage[pscoord]{eso-pic}    % floating text on the page
+\usepackage{calc}                % length calculations
+\usepackage{bookmark}            % PDF bookmarks
+\usepackage{lastpage}            % reference the number of pages
+\usepackage{changepage}          % adjust width for entries
+\usepackage{paracol}             % multi‑column support
+\usepackage{ifthen}              % conditional logic
+\usepackage{needspace}           % avoid page breaks after titles
+\usepackage{iftex}               % engine detection
+
+% Ensure that the generated PDF is machine‑readable and ATS‑parsable.
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+\fi
+
+%------------------------------------------------------------------------------
+%  Layout and formatting settings
+%------------------------------------------------------------------------------
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove extra space before adjustwidth
+\pagestyle{empty}            % suppress headers and footers
+\setcounter{secnumdepth}{0}  % remove section numbering
+\setlength{\parindent}{0pt} % no paragraph indentation
+\setlength{\topskip}{0pt}   % no top skip
+\setlength{\columnsep}{0cm} % spacing between paracol columns
+
+% Customise the section headings to include a horizontal rule beneath.
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+% Define bullet appearance for the highlights environment.
+\renewcommand\labelitemi{$\circ$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{\end{itemize}}
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{\end{itemize}}
+
+% Single and two column entry environments.
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+% Header environment for the CV title and personal details.
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+% Fix for the missing \AND command (renders as a separator pipe)
+\newcommand{\AND}{\unskip\enspace\textbar\enspace}
+
+% Save the original \href command and redefine \href to omit arrow icons.
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2}}}
+
+\begin{document}
+
+    %--------------------------------------------------------------------------
+    %  Header
+    %--------------------------------------------------------------------------
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Zhaoxiang (Aaron) Feng}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        % The \AND macro inside the header environment draws separators.
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}San Diego, CA}%
+        \kern 0.25 cm% spacing between columns
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:zhf004@ucsd.edu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}zhf004@ucsd.edu}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+13363377139}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}(336)\,337\,-7139}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/aaronzhfeng}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}aaronzhfeng}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%        
+        \mbox{\hrefWithoutArrow{https://aaronzhfeng.github.io/}{\color{black}{\footnotesize\faGlobe}\hspace*{0.13cm}aaronzhfeng.github.io}}%
+
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+    %--------------------------------------------------------------------------
+    %  Education Section
+    %--------------------------------------------------------------------------
+    \section{Education}
+
+    % UC San Diego education entry
+    \begin{twocolentry}{\textit{Sep. 2022 -- Apr. 2026 (expected)}}
+        \textbf{University of California San Diego (UCSD)}
+
+        \textit{B.S. in Data Science \& B.S. in Probability \& Statistics}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item GPA: 3.83 (Major GPAs: 3.95 in Data Science, 3.93 in Statistics)
+            \item Honors: Provost Honors (multiple quarters)
+            \item Graduate-level Coursework: Advanced Time Series Analysis, Machine Learning, Applied Statistics, Privacy-sensitive Data Systems
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Research Interests Section
+    %--------------------------------------------------------------------------
+    \section{Research Interests}
+
+    \begin{onecolentry}
+        I am interested in self-evolving AI agents capable of test-time continual learning: systems that accumulate concepts, verify what they have learned, and improve after deployment. My focus areas include concept-level memory, calibrated uncertainty, and efficient inference.
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Publication Section
+    %--------------------------------------------------------------------------
+    \section{Publications}
+    
+    \begin{onecolentry}
+        [1] Matthew Ho, Chen Si, \textbf{Zhaoxiang Feng}, Fangxu Yu, Yichi Yang, Zhijian Liu, Zhiting Hu, Lianhui Qin. ``ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory.''\\
+        \textit{\href{https://arcprize.org/blog/arc-prize-2025-results-analysis}{\textbf{Runner Up}}, ARC Prize 2025 Paper Awards --- Top 8 of 90 paper submissions.} \hfill \textit{[\href{https://arxiv.org/abs/2509.04439}{paper}]} \textit{[\href{https://github.com/matt-seb-ho/arc_memo}{code}]}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    \begin{onecolentry}
+        [2] \textbf{Zhaoxiang Feng}, David Scott Lewis, Enrique Zueco. ``LabMemo: Concept-Level Memory for Autonomous Scientific Discovery.''\\
+        \textit{Accepted at IEEE IROS 2025 Workshop on Embodied AI and Robotics for Future Scientific Discovery (AIR4S) (non-archival)}, 2025. \hfill \textit{[\href{https://github.com/aaronzhfeng/lab_memo/blob/main/paper/LabMemo_Paper.pdf}{paper}]} \textit{[\href{https://github.com/aaronzhfeng/lab_memo}{code}]}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    \begin{onecolentry}
+        [3] \textbf{Zhaoxiang Feng}, David Scott Lewis. ``SOKRATES: Distilling Symbolic Knowledge into Option-Level Reasoning via Solver-Guided Preference Optimization.''\\
+        \textit{Accepted at AAAI 2026 Bridge Program on Logic \& AI: Logical and Symbolic Reasoning in Language Models (LMReasoning)}, 2026. \hfill \textit{[\href{https://github.com/aaronzhfeng/sokrates-oak/blob/main/paper/sokrates.pdf}{paper}]} \textit{[\href{https://github.com/aaronzhfeng/sokrates-oak}{code}]}
+    \end{onecolentry}
+
+    \vspace{0 cm}
+    \begin{onecolentry}\hspace{0.3cm}\rule{1.2cm}{0.3pt}\end{onecolentry}
+    \vspace{0.10 cm}
+
+    \begin{onecolentry}
+        [4] Jinzhou Tang, Yufan Zhou, Zixuan Wang, \textbf{Zhaoxiang Feng}, Xinle Yu, Steven Ngo, Zhengding Hu, Luoshang Pan, Lianhui Qin, Yufei Ding, Tianmin Shu, Jingbo Shang, Zhiting Hu, Zhen Wang. ``$S^3$-Sim: Simulating Humans for Personalized Language Modeling.''\\
+        \textit{Under review at International Conference on Machine Learning (ICML)}, 2026.
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    \begin{onecolentry}
+        [5] \textbf{Zhaoxiang Feng}, Zhongyan Luo, Mingyang Yao, Charlie Sun. ``Explanation-Consistency Graphs: Neighborhood Surprise in Explanation Space for Training Data Debugging.''\\
+        \textit{Under review at ACL Rolling Review (ARR)}, 2026.
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    \begin{onecolentry}
+        [6] \textbf{Zhaoxiang Feng}, Zhongyan Luo, Mingyang Yao, Charlie Sun, Yuwen Zhang, David Scott Lewis. ``EP-Prior: Interpretable ECG Representations via Electrophysiology Constraints.''\\
+        \textit{Under review at IJCAI-ECAI 2026 AI and Health Track}, 2026.
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Research Experience Section
+    %--------------------------------------------------------------------------
+    \section{Research Experience}
+
+    % Q-Lab research position
+    \begin{twocolentry}{\textit{Jan. 2025 -- Present}}
+        \textbf{Research Assistant | Q-Lab, UC San Diego}\\
+        \textit{Advisors: Prof. Lianhui Qin and Matthew Ho}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Contributed to ArcMemo by leading the design of a program-synthesis-style memory ontology, developing many-to-one puzzle-to-feature mappings and manually curating concept parameterizations to enable concept-level reasoning.
+            \item Engineered a reasoning-based retrieval mechanism (System-2 exploration) to resolve embedding failures, achieving a 7.5\% relative gain on ARC-AGI-1 (59.33\% official score).
+            \item Built a complete concept dataset generation pipeline transforming hand-written concepts into validated helper puzzles through multi-stage LLM-based generation, code synthesis, and automated testing.
+            \item Extended the framework to AIME math problems by designing a metacognitive self-assessment pipeline, improving accuracy by 9.3\% via self-reflective memory usage.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    % Wang Lab Student Researcher
+    \begin{twocolentry}{\textit{Jun. 2025 -- Present}}
+        \textbf{Research Assistant | Wang Lab, UC San Diego}\\
+        \textit{Advisors: Prof. Wei Wang and Young Su Ko}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developing TrustPPI (Ongoing): Domain-specific trust signals for protein-protein interaction prediction; showed deformation stability and interface plausibility achieve 0.70--0.80 AUROC vs $\sim$0.50 for generic confidence.
+            \item Architected a heterogeneous Mixture-of-Experts system for chemical reaction prediction on USPTO datasets (1M+ reactions), integrating four specialized expert models with learned routing mechanisms.
+            \item Implemented graph neural network encoders using directed message-passing architectures with shortest-path positional encodings, enabling permutation-invariant molecular representations for stereochemistry-sensitive reaction modeling.
+            \item Engineered training pipelines with teacher-forcing, load-balancing losses, and router warmup; designed evaluation frameworks for top-k accuracy and per-expert ablation.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    % HDSI Capstone Project (Hao Zhang)
+    \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
+        \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
+        \textit{Advisor: Prof. Hao Zhang (Senior Capstone)}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built end-to-end distributed training stack for a 1.8B-parameter language model on 8 NVIDIA B200 GPUs, implementing pipeline parallelism and studying scaling laws firsthand.
+            \item Extending to inference efficiency: developing TPU-optimized speculative decoding to reduce latency for test-time reasoning systems.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    % AR-Bench Research (Yian Ma)
+    \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
+        \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
+        \textit{Advisor: Prof. Yian Ma (Senior Capstone)}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developing AR-Bench, an interactive reasoning benchmark where agents decide when to ask clarifying questions versus commit to an answer.
+            \item Designing mutual-information-based uncertainty signals to detect epistemic uncertainty for risk-controlled stopping decisions.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    % USIPC Research Assistant
+    \begin{twocolentry}{\textit{Sep. 2023 -- Jun. 2024}}
+        \textbf{Research Assistant | U.S. Immigration Policy Center, UC San Diego}\\
+        \textit{Advisors: Prof. Tom K. Wong and Dr. Gabriel De Roche}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built forecasting models (ARIMA, exponential smoothing) on 20+ years of naturalization data to project immigration trends for 2024 election policy briefs.
+            \item Developed automated data pipelines and interactive Tableau dashboards to communicate findings to non-technical stakeholders.
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Teaching & Service Section
+    %--------------------------------------------------------------------------
+    \section{Teaching \& Service}
+
+    % Summer Session I 2025 — DSC 40A
+    \begin{twocolentry}{\textit{Summer 2025}}
+        \textbf{Tutor — DSC\,40A: Theoretical Foundations of Data Science\,I}\\
+        University of California San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Conducted tutoring sessions covering set theory, probability, and algorithmic thinking; led review sessions and supervised oral exams.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.15 cm}
+
+    % Grader positions (condensed)
+    \begin{twocolentry}{\textit{Fall 2024 -- Fall 2025}}
+        \textbf{Grader — Mathematics Department}\\
+        University of California San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Graded for MATH\,180A/C (Probability \& Stochastic Processes), MATH\,181A (Mathematical Statistics), and MATH\,185 (Computational Statistics) a total of 7 times.
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
+    %  Technical Skills Section
+    %--------------------------------------------------------------------------
+    \section{Technical Skills}
+
+    \begin{onecolentry}
+        \textbf{Languages:} Python, R, SQL, Java, JavaScript, HTML\\[3pt]
+        \textbf{ML \& LLM:} PyTorch, PyTorch Geometric, Transformers, scikit-learn, LLM fine-tuning and post-training, RAG systems, memory-augmented LLMs, reasoning-based retrieval\\[3pt]
+        \textbf{Data \& Infrastructure:} Pandas, Spark, AWS, Docker, distributed training, vector databases\\[3pt]
+        \textbf{Scientific Computing:} Physics-based ML (neural operators, inverse problems), continual learning
+    \end{onecolentry}
+
+\end{document}
