@@ -1,0 +1,117 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Version_0.1.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+(|extractbb --version)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-he
+lper.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.
+fd))) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lastpage/lastpage.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/changepage/changepage.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/paracol/paracol.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/charter.sty)
+
+LaTeX Font Warning: Font shape `TU/bch/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 83.
+
+(compiled/Version_0.1.aux)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+
+LaTeX Font Warning: Font shape `TU/bch/b/n' undefined
+(Font)              using `TU/bch/m/n' instead on input line 89.
+
+! Undefined control sequence.
+l.94 ...space*{0.13cm}Del Mar, CA} \kern 5 pt \AND
+                                                  
+! Undefined control sequence.
+l.95 ...*{0.13cm}zhf004@ucsd.edu}} \kern 5 pt \AND
+                                                  
+! Undefined control sequence.
+l.96 ...{0.13cm}(336)\,337\,7139}} \kern 5 pt \AND
+                                                  
+! Undefined control sequence.
+l.97 ...pace*{0.13cm}aaronzhfeng}} \kern 5 pt \AND
+                                                  
+
+LaTeX Font Warning: Font shape `TU/bch/m/it' undefined
+(Font)              using `TU/bch/m/n' instead on input line 109.
+
+[1] [2] 
+AED: lastpage setting LastPage
+[3] (compiled/Version_0.1.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+Output written on compiled/Version_0.1.pdf (3 pages).
+Transcript written on compiled/Version_0.1.log.
