@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.16)  5 MAR 2026 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.16)  4 MAR 2026 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Curriculum_Vitae.tex
-(./Curriculum_Vitae.tex
+**/Users/aaronfeng/CV-Resume/Curriculum_Vitae/Curriculum_Vitae.tex
+(/Users/aaronfeng/CV-Resume/Curriculum_Vitae/Curriculum_Vitae.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -440,7 +440,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(./Curriculum_Vitae.aux)
+No file Curriculum_Vitae.aux.
 \openout1 = `Curriculum_Vitae.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
@@ -461,7 +461,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -584,40 +583,44 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 166.
  [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
 AED: lastpage setting LastPage
-[2] (./Curriculum_Vitae.aux) ) 
+[3] (./Curriculum_Vitae.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15064 strings out of 478268
- 258097 string characters out of 5846347
- 563169 words of memory out of 5000000
- 33073 multiletter control sequences out of 15000+600000
+ 15063 strings out of 478268
+ 258176 string characters out of 5846347
+ 562997 words of memory out of 5000000
+ 33072 multiletter control sequences out of 15000+600000
  505753 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,5n,63p,432b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathi
-t.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/lo
-cal/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
-e/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive
-/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{/usr/local/texliv
-e/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}</usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAwesom
-e5Free-Regular.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fonta
-wesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
-/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbxi1
-0.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/f
-onts/type1/public/lm/lmsy10.pfb>
-Output written on Curriculum_Vitae.pdf (2 pages, 218149 bytes).
+ 60i,5n,63p,486b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
+22/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/
+fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/
+dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/d
+vips/fontawesome5/fa5brands0.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/
+dvips/fontawesome5/fa5free2.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Sol
+id.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.
+pfb>
+Output written on Curriculum_Vitae.pdf (3 pages, 218054 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

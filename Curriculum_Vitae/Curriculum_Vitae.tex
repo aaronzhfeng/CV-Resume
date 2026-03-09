@@ -175,7 +175,7 @@
     \section{Research Interests}
 
     \begin{onecolentry}
-        I am interested in self-evolving AI agents capable of test-time continual learning: systems that accumulate concepts, verify what they have learned, and improve after deployment. My focus areas include concept-level memory, calibrated uncertainty, and efficient inference.
+        I am interested in building AI agents with persistent \textbf{memory} that enables test-time continual learning: systems that accumulate and reuse concepts, self-verify, and improve after deployment. My focus areas include \textbf{memory} architectures, calibrated uncertainty, and efficient inference.
     \end{onecolentry}
 
     %--------------------------------------------------------------------------
@@ -206,7 +206,7 @@
 
     \begin{onecolentry}
         [4] \textbf{Zhaoxiang Feng}, Mingyang Yao, Charlie Sun, David Scott Lewis. ``Which Memory Operation Drives Recovery? A Factorial Study of Retrieve, Write, and Manage Adaptation under Domain Shift.''\\
-        \textit{Accepted at Lifelong Learning Agents (LLA) 2026 Workshop (Poster)}, 2026.
+        \textit{Accepted at ICLR 2026 Workshop on Lifelong Agents: Learning, Aligning, Evolving (LLA)}, 2026. \hfill \textit{[\href{https://openreview.net/pdf?id=81CEtTu1oA}{paper}]}
     \end{onecolentry}
 
     \vspace{0 cm}
@@ -252,10 +252,10 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Contributed to ArcMemo by leading the design of a program-synthesis-style memory ontology, developing many-to-one puzzle-to-feature mappings and manually curating concept parameterizations to enable concept-level reasoning.
+            \item Led design of ArcMemo's program-synthesis-style memory ontology: many-to-one puzzle-to-feature mappings and curated concept parameterizations for concept-level reasoning.
             \item Engineered a reasoning-based retrieval mechanism (System-2 exploration) to resolve embedding failures, achieving a 7.5\% relative gain on ARC-AGI-1 (59.33\% official score).
-            \item Built a complete concept dataset generation pipeline transforming hand-written concepts into validated helper puzzles through multi-stage LLM-based generation, code synthesis, and automated testing.
-            \item Extended the framework to AIME math problems by designing a metacognitive self-assessment pipeline, improving accuracy by 9.3\% via self-reflective memory usage.
+            \item Built a concept dataset generation pipeline transforming hand-written concepts into validated helper puzzles via multi-stage LLM generation, code synthesis, and automated testing.
+            \item Extended to AIME math problems via a metacognitive self-assessment pipeline, improving accuracy by 9.3\% through self-reflective memory usage.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.20 cm}
@@ -268,26 +268,37 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Developing TrustPPI (Ongoing): Domain-specific trust signals for protein-protein interaction prediction; showed deformation stability and interface plausibility achieve 0.70--0.80 AUROC vs $\sim$0.50 for generic confidence.
-            \item Architected a heterogeneous Mixture-of-Experts system for chemical reaction prediction on USPTO datasets (1M+ reactions), integrating four specialized expert models with learned routing mechanisms.
-            \item Implemented graph neural network encoders using directed message-passing architectures with shortest-path positional encodings, enabling permutation-invariant molecular representations for stereochemistry-sensitive reaction modeling.
-            \item Engineered training pipelines with teacher-forcing, load-balancing losses, and router warmup; designed evaluation frameworks for top-k accuracy and per-expert ablation.
+            \item Developing TrustPPI: a model-agnostic trust signal for PPI prediction via deformation stability — injecting Gaussian noise ($\sigma$=0.10, K=10) into intermediate embeddings and combining flip-rate and variance signals; validated across 4 architectures (CNN, Transformer, ESM-2, E(3)-GNN) and 11 model$\times$species combinations.
+            \item Achieved 0.66--0.83 AUROC for error detection across all models, with trust-guided selection discovering true interactions 2--3.5$\times$ faster than confidence baselines and +2--10\% accuracy gain at 80\% coverage.
+            \item Architected a heterogeneous Mixture-of-Experts system for chemical reaction prediction on USPTO (1M+ reactions) using directed message-passing GNN encoders with shortest-path positional encodings and learned routing mechanisms across four specialized expert models.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.20 cm}
 
-    % HDSI Capstone Projects (Hao Zhang and Yian Ma)
+    % HDSI Capstone — Hao Zhang
     \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
         \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
-        \textit{Advisors: Prof. Hao Zhang and Prof. Yian Ma (Senior Capstone)}
+        \textit{Advisor: Prof. Hao Zhang (Senior Capstone)}
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
             \item Built an end-to-end distributed training stack for a 1.8B-parameter language model on 8 NVIDIA B200 GPUs, implementing pipeline parallelism and scaling analysis.
-            \item Developing TPU-optimized speculative decoding to reduce latency for test-time reasoning systems.
-            \item Developing AR-Bench, an interactive reasoning benchmark where agents decide when to ask clarifying questions versus commit to an answer.
-            \item Designing mutual-information-based uncertainty signals to detect epistemic uncertainty for risk-controlled stopping decisions.
+            \item Ported DFlash (diffusion-based speculative decoding) to JAX/TPU, achieving 3.02$\times$ average speedup (4.93$\times$ on math, 9 benchmarks); exploited TPU MXU 128$\times$128 tile structure for flat verification cost up to K=128, lifting the GPU-motivated K=16 constraint; integrated into vLLM with 2.31$\times$ end-to-end speedup; PR-ready for vllm-project/tpu-inference.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    % HDSI Capstone — Yian Ma
+    \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
+        \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
+        \textit{Advisor: Prof. Yian Ma (Senior Capstone)}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Designed MI-based uncertainty signals for epistemic uncertainty detection and risk-controlled stopping in LLM reasoning.
+            \item Developing an uncertainty-guided interactive reasoning framework using self-revision mutual information for ask-vs-answer stopping; designed Evidence Sensitivity and Hypothesis Discrimination probes with Clopper-Pearson risk-controlled calibration, improving AR-Bench Detective Cases from 36\% to 45\%.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.20 cm}
@@ -300,8 +311,7 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built forecasting models (ARIMA, exponential smoothing) on 20+ years of naturalization data to project immigration trends for 2024 election policy briefs.
-            \item Developed automated data pipelines and interactive Tableau dashboards to communicate findings to non-technical stakeholders.
+            \item Built ARIMA and exponential smoothing forecasting models on 20+ years of naturalization data for 2024 election policy briefs; developed automated data pipelines and Tableau dashboards for non-technical stakeholders.
         \end{highlights}
     \end{onecolentry}
 
@@ -318,8 +328,8 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item \textbf{Tutor} — DSC\,40A: Theoretical Foundations of Data Science I (Summer 2025)
-            \item \textbf{Grader} — MATH\,180A/C, MATH\,181A, MATH\,185, Mathematics Department (Fall 2024 -- Fall 2025, 7 quarters)
+            \item \textbf{Tutor:} DSC\,40A: Theoretical Foundations of Data Science I (Summer 2025)
+            \item \textbf{Grader:} MATH\,180A/C, MATH\,181A, MATH\,185 (Fall 2024 -- Fall 2025, 7 quarters)
         \end{highlights}
     \end{onecolentry}
 
@@ -329,9 +339,9 @@
     \section{Technical Skills}
 
     \begin{onecolentry}
-        \textbf{Languages:} Python, R, SQL, Java, JavaScript, HTML \quad
-        \textbf{Infra:} Pandas, Spark, AWS, Docker, distributed training, vector databases\\[2pt]
-        \textbf{ML \& LLM:} PyTorch, PyTorch Geometric, Transformers, scikit-learn, LLM fine-tuning, RAG, memory-augmented LLMs, reasoning-based retrieval, continual learning
+        \textbf{Languages:} Python, R, SQL, Java, JavaScript, HTML\\[2pt]
+        \textbf{ML \& LLM:} PyTorch, PyTorch Geometric, Transformers, scikit-learn, LLM fine-tuning and post-training, RAG systems, memory-augmented LLMs, reasoning-based retrieval, continual learning\\[2pt]
+        \textbf{Data \& Infrastructure:} Pandas, Spark, AWS, Docker, distributed training, vector databases
     \end{onecolentry}
 
 \end{document}
