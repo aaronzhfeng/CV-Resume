@@ -8,10 +8,10 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=1.5 cm,    % separation between body and page edge from the top
-    bottom=1.5 cm, % separation between body and page edge from the bottom
-    left=1.8 cm,   % separation between body and page edge from the left
-    right=1.8 cm,  % separation between body and page edge from the right
+    top=2 cm,      % separation between body and page edge from the top
+    bottom=2 cm,   % separation between body and page edge from the bottom
+    left=2 cm,     % separation between body and page edge from the left
+    right=2 cm,    % separation between body and page edge from the right
     footskip=1.0 cm % separation between body and footer
     % showframe % uncomment for debugging layout
 ]{geometry}
@@ -24,7 +24,7 @@
 \usepackage{fontawesome5}    % icon fonts
 \usepackage{amsmath}         % mathematics support
 \usepackage[
-    pdftitle={Zhaoxiang Feng's CV},
+    pdftitle={Zhaoxiang (Aaron) Feng's CV},
     pdfauthor={Zhaoxiang Feng},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
@@ -120,7 +120,7 @@
     %  Header
     %--------------------------------------------------------------------------
     \begin{header}
-        \textbf{\fontsize{24 pt}{24 pt}\selectfont Zhaoxiang Feng}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Zhaoxiang (Aaron) Feng}
 
         \vspace{0.3 cm}
 
@@ -133,7 +133,7 @@
         \kern 0.20 cm%
         \AND%
         \kern 0.20 cm%
-        \mbox{\hrefWithoutArrow{tel:+13363377139}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}(336)\,337-7139}}%
+        \mbox{\hrefWithoutArrow{tel:+13363377139}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}(336)\,337\,-7139}}%
         \kern 0.20 cm%
         \AND%
         \kern 0.20 cm%
@@ -152,7 +152,7 @@
     %--------------------------------------------------------------------------
     \section{Education}
 
-    \begin{twocolentry}{\textit{Aug. 2026 -- Present}}
+    \begin{twocolentry}{\textit{Sep. 2026 -- Present}}
         \textbf{The University of Texas at Austin}
 
         \textit{M.S. in Computer Science}
@@ -169,10 +169,10 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item GPA 3.84 (Data Science 3.95, Probability \& Statistics 3.93).
+            \item GPA 3.84 (Major GPAs: 3.95 Data Science, 3.93 Statistics); Provost Honors.
+            \item Graduate coursework: Machine Learning, Time Series Analysis, Applied Statistics, Optimization, Privacy-sensitive Data Systems.
         \end{highlights}
     \end{onecolentry}
-
 
     %--------------------------------------------------------------------------
     %  Publications
@@ -188,9 +188,15 @@
 
     \begin{onecolentry}
         [2] Lanxiang Hu, \textbf{Zhaoxiang Feng}, Yulun Wu, Haoran Yuan, Yujie Zhao, Yu-Yang Qian, Bojun Wang, Peng Zhao, Daxin Jiang, Yibo Zhu, Tajana Rosing, Hao Zhang. ``JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting.''\\
-        \textit{Under review at the Conference on Neural Information Processing Systems (NeurIPS)}, 2026. \hfill \textit{[\href{https://arxiv.org/abs/2606.18394}{paper}]} \textit{[\href{https://github.com/hao-ai-lab/JetSpec}{code}]}
+        \textit{Under review at Conference on Neural Information Processing Systems (NeurIPS)}, 2026. \hfill \textit{[\href{https://arxiv.org/abs/2606.18394}{paper}]} \textit{[\href{https://github.com/hao-ai-lab/JetSpec}{code}]}
     \end{onecolentry}
 
+    \vspace{0.20 cm}
+
+    \begin{onecolentry}
+        [3] \textbf{Zhaoxiang Feng}, Mingyang Yao, Charlie Sun, David Scott Lewis. ``Which Memory Operation Drives Recovery? A Factorial Study of Retrieve, Write, and Manage Adaptation under Domain Shift.''\\
+        \textit{Accepted at ICLR 2026 Workshop on Lifelong Agents: Learning, Aligning, Evolving (LLA)}, 2026. \hfill \textit{[\href{https://iclr.cc/virtual/2026/10012548}{paper}]}
+    \end{onecolentry}
 
 
     %--------------------------------------------------------------------------
@@ -200,34 +206,79 @@
 
     \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
         \textbf{Research Assistant | Hao AI Lab, UC San Diego}\\
-        \textit{Advisor: Prof. Hao Zhang}
+        \textit{Advisors: Prof. Hao Zhang and Lanxiang Hu}
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Led \href{https://x.com/haoailab/status/2082925179529994586}{\textbf{JetSpec++}}, a causal correction for parallel drafting that conditions each drafted token on its full branch history rather than on the preceding token alone; at matched parameter count it outperformed DeepSeek's DSpark, with the margin widening at draft depths beyond those used in training.
-            \item Contributed to \href{https://jetspec-project.github.io/jetspec-web/}{\textbf{JetSpec}}, a draft head that generates a complete speculative tree in one forward pass while preserving the target model's autoregressive factorization along every branch; built its standalone inference engine (paged KV cache, Triton tree-attention kernel, CUDA-graph verification) and its evaluation suite. JetSpec reaches up to 9.64$\times$ end-to-end speedup over autoregressive decoding on Qwen3-8B (MATH-500).
-            \item Ported \textbf{DFlash} speculative decoding to TPU in JAX as the primary contributor, showing that verification cost stays flat in draft block size through K=1024. Averaged 3.13$\times$ speedup on TPU v5p; the draft model and proposer are merged into \href{https://github.com/vllm-project/tpu-inference/pull/1868}{vLLM's TPU backend} with pipeline integration in review, and the work is featured on the \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{Google Developers Blog}.
-            \item Built the training stack for a 1.8B-parameter language model on eight NVIDIA B200 GPUs, implementing the full pre-training and SFT and DPO post-training system with DDP and ZeRO-1.
+            \item Designed \href{https://x.com/haoailab/status/2082925179529994586}{\textbf{JetSpec++}}, a causal correction for parallel drafting that conditions each drafted token on its full branch history rather than the immediately preceding token. Achieves 0.89 additional accepted tokens per verification round over a parameter-matched baseline, with the margin widening at draft depths beyond those used in training.
+            \item Contributed to \href{https://jetspec-project.github.io/jetspec-web/}{\textbf{JetSpec}}, a draft head that generates a complete speculative tree in one forward pass while preserving the target model's autoregressive factorization along every branch; built its serving-engine internals and evaluation suite. Delivers up to 9.64$\times$ end-to-end speedup on Qwen3-8B.
+            \item Ported \textbf{DFlash} speculative decoding to TPU in JAX, exploiting the hardware's tile structure to remove a GPU-motivated cap on draft width. Averaged 3.13$\times$ speedup on TPU v5p; merged into \href{https://github.com/vllm-project/tpu-inference/pull/1868}{vLLM's TPU backend} and featured on the \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{Google Developers Blog}.
+            \item Built the distributed training stack for a 1.8B-parameter language model on eight NVIDIA B200 GPUs, implementing pipeline parallelism and conducting scaling analysis.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.20 cm}
 
     \begin{twocolentry}{\textit{Jan. 2025 -- Jun. 2026}}
         \textbf{Research Assistant | Q-Lab, UC San Diego}\\
-        \textit{Advisor: Prof. Lianhui Qin}
+        \textit{Advisors: Prof. Lianhui Qin and Matthew Ho}
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Contributed to the design of \textbf{ArcMemo}'s program-synthesis memory ontology, a typed, parameterized representation in which reusable reasoning concepts are stored and composed.
-            \item Worked on the reasoning-guided concept selection that replaced embedding-based retrieval after embedding search proved ineffective on the ARC-AGI-1 abstract-reasoning benchmark.
-            \item Built the pipeline that produces concept-labeled helper puzzles: each hand-written concept is expanded by an LLM into puzzle-generating code, which is executed and tested so that every generated puzzle is verified to exercise its concept.
-            \item Designed the framework's adaptation to AIME competition mathematics and ran the generalization experiments and memory-format comparisons that informed the final design.
+            \item Led the design of \textbf{ArcMemo}'s program-synthesis memory ontology: a typed, parameterized representation in which reusable reasoning concepts are stored and composed.
+            \item Replaced embedding-based retrieval with reasoning-guided concept selection, yielding a 7.5\% relative gain over the no-memory baseline on ARC-AGI-1 (59.33\% official score) and 15\% over embedding retrieval.
+            \item Built the concept dataset pipeline, converting hand-written concepts into validated training puzzles through staged LLM generation, code synthesis, and automated testing.
+            \item Extended the framework to AIME competition mathematics with a metacognitive gate governing when memory is consulted, improving accuracy by 9.3\%; conducted the memory-format comparisons that settled the final design.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
+        \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
+        \textit{Advisor: Prof. Yian Ma}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developing \textbf{Triad}, a diagnostic framework for interactive reasoning agents that localizes whether task performance is capped by model capability, harness design, or available context, decomposing success into question targeting, evidence acquisition, and answer conversion.
+            \item On AR-Bench detective cases, a ladder of structural interventions over the framework's slot-structured knowledge graph raised accuracy on the pinned 50-case hard set from 18\% to 46\%; the same structure ported to the MediQ clinical benchmark without domain-specific modification.
+            \item Established evidence acquisition, rather than answer accuracy, as the framework's progress signal: substituting a weaker adversary raises accuracy from 27\% to 40\% while acquisition falls from 24\% to 16\%.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    \begin{twocolentry}{\textit{Jun. 2025 -- Jun. 2026}}
+        \textbf{Student Researcher | Wang Lab, UC San Diego}\\
+        \textit{Advisors: Prof. Wei Wang and Young Su Ko}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed \textbf{TrustPPI}, a model-agnostic reliability signal for protein--protein interaction prediction that perturbs a model's internal representations and measures prediction stability. Manuscript in preparation.
+            \item Achieved 0.66--0.83 AUROC for error detection across three architectures; stability-guided selection confirms true interactions 2--3.5$\times$ faster than confidence-based baselines.
         \end{highlights}
     \end{onecolentry}
 
-%--------------------------------------------------------------------------
+    %--------------------------------------------------------------------------
+    %  Teaching & Service
+    %--------------------------------------------------------------------------
+    \section{Teaching \& Service}
+
+    \begin{twocolentry}{\textit{Fall 2024 -- Fall 2025}}
+        \textbf{Tutor \& Grader}\\
+        University of California San Diego
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textbf{Tutor:} set theory, probability, and algorithmic thinking, Summer 2025.
+            \item \textbf{Grader:} probability, stochastic processes, mathematical statistics, and computational statistics, 7 quarters.
+        \end{highlights}
+    \end{onecolentry}
+
+    %--------------------------------------------------------------------------
     %  Technical Skills
     %--------------------------------------------------------------------------
     \section{Technical Skills}
@@ -235,7 +286,7 @@
     \begin{onecolentry}
         \textbf{Languages:} Python, R, SQL, Java, JavaScript\\[2pt]
         \textbf{ML frameworks:} PyTorch, JAX, Hugging Face Transformers\\[2pt]
-        \textbf{Systems \& infrastructure:} LLM serving engines (vLLM; JetSpec's JetFlow engine), distributed GPU training, TPU inference (JAX), Docker
+        \textbf{Systems \& infrastructure:} LLM serving engines (vLLM, SGLang), distributed GPU training, TPU inference (JAX), Docker, AWS
     \end{onecolentry}
 
 \end{document}

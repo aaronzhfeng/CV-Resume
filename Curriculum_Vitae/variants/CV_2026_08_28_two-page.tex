@@ -8,10 +8,10 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=1.5 cm,    % separation between body and page edge from the top
-    bottom=1.5 cm, % separation between body and page edge from the bottom
-    left=1.8 cm,   % separation between body and page edge from the left
-    right=1.8 cm,  % separation between body and page edge from the right
+    top=2 cm,      % separation between body and page edge from the top
+    bottom=2 cm,   % separation between body and page edge from the bottom
+    left=2 cm,     % separation between body and page edge from the left
+    right=2 cm,    % separation between body and page edge from the right
     footskip=1.0 cm % separation between body and footer
     % showframe % uncomment for debugging layout
 ]{geometry}
@@ -24,7 +24,7 @@
 \usepackage{fontawesome5}    % icon fonts
 \usepackage{amsmath}         % mathematics support
 \usepackage[
-    pdftitle={Zhaoxiang Feng's CV},
+    pdftitle={Zhaoxiang Feng's CV (two-page)},
     pdfauthor={Zhaoxiang Feng},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
@@ -170,6 +170,7 @@
     \begin{onecolentry}
         \begin{highlights}
             \item GPA 3.84 (Data Science 3.95, Probability \& Statistics 3.93).
+            \item Graduate coursework: Machine Learning, Time Series Analysis, Applied Statistics, Privacy-sensitive Data Systems.
         \end{highlights}
     \end{onecolentry}
 
@@ -207,8 +208,23 @@
         \begin{highlights}
             \item Led \href{https://x.com/haoailab/status/2082925179529994586}{\textbf{JetSpec++}}, a causal correction for parallel drafting that conditions each drafted token on its full branch history rather than on the preceding token alone; at matched parameter count it outperformed DeepSeek's DSpark, with the margin widening at draft depths beyond those used in training.
             \item Contributed to \href{https://jetspec-project.github.io/jetspec-web/}{\textbf{JetSpec}}, a draft head that generates a complete speculative tree in one forward pass while preserving the target model's autoregressive factorization along every branch; built its standalone inference engine (paged KV cache, Triton tree-attention kernel, CUDA-graph verification) and its evaluation suite. JetSpec reaches up to 9.64$\times$ end-to-end speedup over autoregressive decoding on Qwen3-8B (MATH-500).
-            \item Ported \textbf{DFlash} speculative decoding to TPU in JAX as the primary contributor, showing that verification cost stays flat in draft block size through K=1024. Averaged 3.13$\times$ speedup on TPU v5p; the draft model and proposer are merged into \href{https://github.com/vllm-project/tpu-inference/pull/1868}{vLLM's TPU backend} with pipeline integration in review, and the work is featured on the \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{Google Developers Blog}.
+            \item Ported \textbf{DFlash}, a diffusion-style speculative decoder, to TPU in JAX as the primary contributor, showing that verification cost stays flat in draft block size through K=1024. Averaged 3.13$\times$ speedup on TPU v5p; the draft model and proposer are merged into \href{https://github.com/vllm-project/tpu-inference/pull/1868}{vLLM's TPU backend} with pipeline integration in review, and the work is featured on the \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{Google Developers Blog}.
             \item Built the training stack for a 1.8B-parameter language model on eight NVIDIA B200 GPUs, implementing the full pre-training and SFT and DPO post-training system with DDP and ZeRO-1.
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.20 cm}
+
+    \begin{twocolentry}{\textit{Jun. 2025 -- Jun. 2026}}
+        \textbf{Student Researcher | Wang Lab, UC San Diego}\\
+        \textit{Advisor: Prof. Wei Wang}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developing \textbf{TrustPPI}, a model-agnostic reliability signal for protein--protein interaction prediction: Gaussian perturbation of a model's intermediate embeddings over repeated forward passes, scored by prediction flip rate and variance, with no retraining required. Manuscript in preparation.
+            \item Achieved 0.66--0.83 AUROC for error detection across three architectures (D-SCRIPT, TUnA, PLM-interact) on eight species datasets, where native confidence scores fall near 0.5; stability-guided experiment selection confirms true interactions 2--3.5$\times$ faster than confidence-based baselines.
+            \item Architected a heterogeneous mixture-of-experts model for chemical reaction prediction on USPTO (over one million reactions), combining graph, SMILES-sequence, 3D-geometry, and condition-aware experts under a learned router; built its training pipeline with teacher forcing, load-balancing losses, and router warm-up, and an evaluation suite for top-$k$ accuracy and per-expert ablation.
+            \item Implemented directed message-passing graph encoders with shortest-path positional encodings, producing permutation-invariant molecular representations for stereochemistry-sensitive reactions.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.20 cm}
@@ -224,6 +240,21 @@
             \item Worked on the reasoning-guided concept selection that replaced embedding-based retrieval after embedding search proved ineffective on the ARC-AGI-1 abstract-reasoning benchmark.
             \item Built the pipeline that produces concept-labeled helper puzzles: each hand-written concept is expanded by an LLM into puzzle-generating code, which is executed and tested so that every generated puzzle is verified to exercise its concept.
             \item Designed the framework's adaptation to AIME competition mathematics and ran the generalization experiments and memory-format comparisons that informed the final design.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.20 cm}
+
+    \begin{twocolentry}{\textit{Sep. 2025 -- Present}}
+        \textbf{Student Researcher | Halıcıo\u{g}lu Data Science Institute, UC San Diego}\\
+        \textit{Advisor: Prof. Yian Ma}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developing \textbf{Triad}, a diagnostic framework for interactive reasoning agents that localizes whether task performance is capped by model capability, harness design, or available context, decomposing success into question targeting, evidence acquisition, and answer conversion.
+            \item On AR-Bench detective cases, a ladder of structural interventions over the framework's slot-structured knowledge graph raised accuracy on the pinned 50-case hard set from 18\% to 46\%; the same structure ported to the MediQ clinical benchmark without domain-specific modification.
+            \item Established evidence acquisition, rather than answer accuracy, as the framework's progress signal: substituting a weaker adversary raises accuracy from 27\% to 40\% while acquisition falls from 24\% to 16\%.
         \end{highlights}
     \end{onecolentry}
 

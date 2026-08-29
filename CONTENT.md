@@ -27,7 +27,7 @@
 **University of California San Diego (UCSD)**
 - Degree: B.S. in Data Science & B.S. in Probability & Statistics, Minor in History
 - Dates: Sep. 2022 -- Apr. 2026 (expected)
-- GPA: 3.83 (Major GPAs: 3.95 in Data Science, 3.93 in Statistics) [latest CV]
+- GPA: 3.84 (Major GPAs: 3.95 in Data Science, 3.93 in Statistics) [latest CV]
 - Honors: Provost Honors (multiple quarters; Fall 2022 -- Spring 2025)
 - Graduate-level Coursework:
   - DSC 291 (Topics in Data Science)
