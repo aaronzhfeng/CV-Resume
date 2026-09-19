@@ -56,76 +56,74 @@
 
 \begin{document}
 
-%----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Zhaoxiang Feng} \\ \vspace{1pt}
     \small (336) 337-7139 $|$ \href{mailto:aaronzhfeng@utexas.edu}{\underline{aaronzhfeng@utexas.edu}} $|$
-    \href{https://github.com/aaronzhfeng}{\underline{github.com/aaronzhfeng}} $|$
-    Open to relocation $|$ Available May--Aug. 2027
+    \href{https://github.com/aaronzhfeng}{\underline{github.com/aaronzhfeng}} \\
+    \small Seeking ML Systems, LLM Inference, and ML Research Internships $|$ Available May--August 2027
 \end{center}
 
-%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {The University of Texas at Austin}{Austin, TX}
-      {Master of Science in Computer Science}{Aug. 2026 -- May 2028}
+      {Master of Science in Computer Science}{Aug. 2026 -- Present}
     \resumeSubheading
       {University of California San Diego}{San Diego, CA}
       {B.S. in Data Science; B.S. in Probability \& Statistics; GPA: 3.84/4.00}{Sep. 2022 -- Mar. 2026}
   \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
 \section{Research Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {Hao AI Lab, UC San Diego}{San Diego, CA}
       {Research Assistant, Advisor: Prof. Hao Zhang}{Sep. 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Built JetSpec's standalone \textbf{LLM inference engine}: \textbf{paged KV cache}, continuous batching, a \textbf{tree-attention Triton kernel}, and \textbf{CUDA-graph} verification, at $\sim$1,000 tok/s on one \textbf{NVIDIA B200}}
-        \resumeItem{JetSpec reaches up to \textbf{9.64$\times$ end-to-end speedup} over autoregressive decoding on Qwen3-8B; second author, under review at NeurIPS 2026}
-        \resumeItem{Led \textbf{JetSpec++}, an attention-layer causal correction for parallel drafting that accepts \textbf{0.89 more tokens per round} than DeepSeek's DSpark at matched size, widening to 1.67 at unseen draft depths}
-        \resumeItem{Ported \textbf{DFlash} speculative decoding to \textbf{Google Cloud TPU} in \textbf{JAX} as primary contributor: \textbf{3.13$\times$} average speedup over 9 benchmarks and \textbf{2.29$\times$ vs.\ 1.30$\times$} for EAGLE-3; featured on the \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{\underline{Google Developers Blog}}}
-        \resumeItem{Upstreamed the port to \textbf{vLLM tpu-inference} in 3 PRs (model and proposer \href{https://github.com/vllm-project/tpu-inference/pull/1868}{\underline{merged}}; integration in review)}
+        \resumeItem{Built JetSpec's standalone \textbf{LLM inference engine}: \textbf{paged KV cache}, continuous batching, a paged tree-attention \textbf{Triton kernel}, and \textbf{CUDA-graph} verification, serving \textbf{$\sim$1,000 tokens/s} on one NVIDIA B200}
+        \resumeItem{Contributed to \href{https://arxiv.org/abs/2606.18394}{\underline{\textbf{JetSpec}}}, drafting a full speculative tree in one forward pass: up to \textbf{9.64$\times$} end-to-end speedup over autoregressive decoding on Qwen3-8B; second author, under review at NeurIPS 2026}
+        \resumeItem{Led \href{https://x.com/haoailab/status/2082925179529994586}{\underline{\textbf{JetSpec++}}}, conditioning an attention-layer causal correction on each token's full branch history; accepted \textbf{0.89 more tokens per drafting round} than DeepSeek's DSpark at matched parameter count, widening to \textbf{1.67} at draft depths unseen in training}
       \resumeItemListEnd
 
     \resumeSubheading
       {Q-Lab, UC San Diego}{San Diego, CA}
       {Research Assistant, Advisor: Prof. Lianhui Qin}{Jan. 2025 -- Jun. 2026}
       \resumeItemListStart
-        \resumeItem{Contributed to \textbf{ArcMemo}, concept-level lifelong memory for LLM reasoning; \textbf{Runner-Up, ARC Prize 2025 Paper Awards} (top 8 of 90)}
-        \resumeItem{Built a \textbf{concept-to-puzzle pipeline} in which an LLM turns each concept into executable generator code, filtered for determinism and well-formedness; adapted the method to \textbf{AIME} math}
+        \resumeItem{Contributed to \href{https://arxiv.org/abs/2509.04439}{\underline{\textbf{ArcMemo}}}'s typed, composable memory for reusable reasoning concepts and its reasoning-guided concept selection; \textbf{Runner-Up, ARC Prize 2025 Paper Awards}}
+        \resumeItem{Built a \textbf{concept-to-puzzle pipeline} that generates executable puzzle-generator code from concepts and filters its outputs for well-formedness and determinism}
       \resumeItemListEnd
 
     \resumeSubheading
       {Wang Lab, UC San Diego}{San Diego, CA}
       {Student Researcher, Advisor: Prof. Wei Wang}{Jun. 2025 -- Jun. 2026}
       \resumeItemListStart
-        \resumeItem{Developing \textbf{TrustPPI}, a reliability signal for protein interaction models from embedding-perturbation stability: \textbf{0.66--0.83 AUROC} error detection across 3 architectures, vs.\ $\sim$0.5 for native confidence}
+        \resumeItem{Developing \textbf{TrustPPI}, a reliability signal from embedding-perturbation stability for protein interaction models; \textbf{0.66--0.83 AUROC} error detection across three architectures; manuscript in preparation}
       \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{LLM Pre-training System} $|$ \emph{PyTorch, DDP, ZeRO-1, FlashAttention-2, torch.compile}}{Sep. 2025 -- Dec. 2025}
+          {\textbf{DFlash on Google Cloud TPU} $|$ \emph{JAX, vLLM tpu-inference, TPU v4/v5p}}{\href{https://github.com/aaronzhfeng/tpu-spec-decode}{\underline{Code}} $|$ \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{\underline{Google Developers Blog}}}
           \resumeItemListStart
-            \resumeItem{Built a training system for a \textbf{1.8B-parameter} model on \textbf{8$\times$ NVIDIA B200} as a UCSD senior capstone (Prof. Hao Zhang), with BF16 and FLOPs-accurate MFU monitoring}
-            \resumeItem{Trained on \textbf{117B tokens} in a 60-hour budget at \textbf{160K tokens/s} and \textbf{36.7\% MFU}; added SFT and DPO post-training (up to +2.6\% on benchmarks)}
+            \resumeItem{Built DFlash block-diffusion speculative decoding on TPU in JAX with the Google Cloud TPU team: a standalone draft-verify loop with dual KV cache, integrated into vLLM's serving path and speculative decoding manager}
+            \resumeItem{Upstreamed a \textbf{2.8K-line PR} into vLLM tpu-inference (\href{https://github.com/vllm-project/tpu-inference/pull/1868}{\underline{\#1868}}, merged): DFlash draft model, concat-attention kernel, JAX and torchax proposers, and unit tests}
+            \resumeItem{Reached \textbf{3.13$\times$ average speedup} over nine benchmarks on TPU v5p (up to 5.72$\times$ on MATH-500) and 2.29$\times$ vs. 1.30$\times$ for EAGLE-3, after fixing a sequence-length alignment bug that depressed acceptance}
+            \resumeItem{Showed verification cost stays flat in draft block size through \textbf{K=1024} on TPU, and built a \href{https://github.com/aaronzhfeng/dflash-wide}{\underline{GPU training suite}} for wider draft blocks (K=32--128)}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/aaronzhfeng/llm-foundry}{\underline{\textbf{LLM Pre-training System}}} $|$ \emph{PyTorch, DDP, ZeRO-1, FlashAttention-2}}{Sep. 2025 -- Dec. 2025}
+          \resumeItemListStart
+            \resumeItem{Built the training stack for a \textbf{1.8B-parameter} model on \textbf{8 NVIDIA B200 GPUs}, using BF16 and torch.compile; achieved \textbf{160K tokens/s} and \textbf{36.7\% model FLOPs utilization}}
+            \resumeItem{Implemented \textbf{SFT and DPO} post-training on Alpaca and HH-RLHF; supervised fine-tuning improved OpenBookQA accuracy by \textbf{2.6 percentage points} over the base model}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-%-----------SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Triton, R, SQL, Java, JavaScript} \\
-     \textbf{ML Systems}{: vLLM, speculative decoding, paged KV cache, continuous batching, CUDA graphs, FlashAttention-2} \\
-     \textbf{Hardware \& Distributed}{: NVIDIA B200/H100, Google Cloud TPU (v5p, v6e), JAX, PyTorch DDP, ZeRO} \\
-     \textbf{ML \& Tools}{: PyTorch, Hugging Face Transformers, SFT, DPO, RAG, Git, Linux, Docker}
+     \textbf{Languages}{: Python, R, SQL, Java, JavaScript} \\
+     \textbf{ML Systems}{: PyTorch, JAX, Triton, vLLM, Hugging Face Transformers, DDP, ZeRO-1, CUDA graphs} \\
+     \textbf{Tools}{: Git, Linux, Docker}
     }}
  \end{itemize}
 
