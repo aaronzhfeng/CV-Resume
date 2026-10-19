@@ -1,0 +1,132 @@
+%-------------------------
+% Resume in LaTeX, based on Jake Gutierrez's template (MIT License)
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\hypersetup{pdftitle={Zhaoxiang Feng - Resume}, pdfauthor={Zhaoxiang Feng}}
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Zhaoxiang Feng} \\ \vspace{1pt}
+    \small Austin, TX $|$ (336) 337-7139 $|$ \href{mailto:aaronzhfeng@utexas.edu}{\underline{aaronzhfeng@utexas.edu}} $|$
+    \href{https://github.com/aaronzhfeng}{\underline{github.com/aaronzhfeng}} \\
+    \small Seeking Software Engineering (ML Systems, LLM Inference) and ML Research Internships $|$ Available May--Aug. 2027
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of Texas at Austin}{Austin, TX}
+      {Master of Science in Computer Science}{Aug. 2026 -- Present}
+      \vspace{-9pt}\item\begin{tabular*}{0.97\textwidth}{l}\small Coursework: Post-Training of LLMs, ML for Systems, Natural Language Processing, Mathematics in Deep Learning\end{tabular*}\vspace{-12pt}
+    \resumeSubheading
+      {University of California San Diego}{San Diego, CA}
+      {B.S. in Data Science; B.S. in Probability \& Statistics; GPA: 3.84/4.00}{Sep. 2022 -- Mar. 2026}
+  \resumeSubHeadingListEnd
+
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Hao AI Lab, UC San Diego}{San Diego, CA}
+      {Research Assistant, Advisor: Prof. Hao Zhang}{Sep. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Led \href{https://arxiv.org/abs/2610.19792}{\underline{\textbf{JetSpec++}}} (first author, equal contribution; under review at ICLR 2027): \textbf{1,361 tokens/s} single-request on GB200, up to \textbf{7.45$\times$} over autoregressive decoding and \textbf{1.54$\times$} over DSpark, by co-designing self-refining parallel drafting, foresight drafting, and pipelined draft-verify overlap}
+        \resumeItem{Built JetSpec's standalone \textbf{LLM inference engine} (\textbf{paged KV cache}, continuous batching, \textbf{Triton} tree attention, \textbf{CUDA-graph} verification): up to \textbf{1,150 tokens/s} single-stream on one B200}
+        \resumeItem{Second author of \href{https://arxiv.org/abs/2606.18394}{\underline{\textbf{JetSpec}}} (under review at ICLR 2027), which drafts a full token tree in one forward pass: up to \textbf{9.64$\times$} end-to-end speedup over autoregressive decoding (Qwen3-8B, MATH-500, H100)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Q-Lab, UC San Diego}{San Diego, CA}
+      {Research Assistant, Advisor: Prof. Lianhui Qin}{Jan. 2025 -- Jun. 2026}
+      \resumeItemListStart
+        \resumeItem{Contributed to \href{https://arxiv.org/abs/2509.04439}{\underline{\textbf{ArcMemo}}}'s typed, composable memory for reusable reasoning concepts and its reasoning-guided concept selection; \textbf{Runner-Up, ARC Prize 2025 Paper Awards}}
+        \resumeItem{Built a \textbf{concept-to-puzzle data pipeline} that adapts the open-source BARC generator to turn hand-written ARC concepts into executable puzzle generators and validated helper puzzles}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Wang Lab, UC San Diego}{San Diego, CA}
+      {Student Researcher, Advisor: Prof. Wei Wang}{Jun. 2025 -- Jun. 2026}
+      \resumeItemListStart
+        \resumeItem{Developing \textbf{TrustPPI}, a reliability signal from embedding-perturbation stability for protein interaction models; \textbf{0.66--0.83 AUROC} error detection across three architectures; manuscript in preparation}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{DFlash on Google Cloud TPU} $|$ \emph{JAX, vLLM tpu-inference, TPU v4/v5p/v6e}}{\href{https://github.com/aaronzhfeng/tpu-spec-decode}{\underline{Code}} $|$ \href{https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/}{\underline{Google Developers Blog}}}
+          \resumeItemListStart
+            \resumeItem{Ported DFlash block-diffusion speculative decoding from GPU to TPU in JAX with the Google Cloud TPU team, from a standalone draft-verify loop with dual KV cache to vLLM serving integration}
+            \resumeItem{Upstreamed a \textbf{2.8K-line PR} into vLLM tpu-inference (\href{https://github.com/vllm-project/tpu-inference/pull/1868}{\underline{\#1868}}, merged): DFlash draft model, concat-attention layer, JAX and torchax proposers, and unit tests}
+            \resumeItem{Reached \textbf{3.13$\times$ average speedup} over nine benchmarks on TPU v5p (Qwen3-4B, up to 5.72$\times$ on MATH-500), and \textbf{2.29$\times$} end-to-end vLLM serving speedup vs. 1.30$\times$ for EAGLE-3 (Llama-3.1-8B)}
+            \resumeItem{Showed that TPU verification cost stays flat in draft block size through \textbf{K=1024}, which makes much wider draft blocks nearly free to verify}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/aaronzhfeng/llm-foundry}{\underline{\textbf{LLM Pre-training System}}} $|$ \emph{PyTorch, DDP, ZeRO-1, FlashAttention-2}}{Sep. 2025 -- Dec. 2025}
+          \resumeItemListStart
+            \resumeItem{Built the training stack for a \textbf{1.8B-parameter} model on \textbf{8 NVIDIA B200 GPUs}, using BF16 and torch.compile; pre-trained on \textbf{117B tokens in 55 hours} (about \textbf{630K tokens/s} steady-state, \textbf{36\% MFU})}
+            \resumeItem{Implemented \textbf{SFT and DPO} post-training on Alpaca and HH-RLHF}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, Java, R, JavaScript} \\
+     \textbf{ML Systems}{: PyTorch, JAX, Triton, vLLM, Hugging Face Transformers, DDP, ZeRO-1, CUDA graphs} \\
+     \textbf{Hardware \& Tools}{: NVIDIA B200/GB200/H100, Google Cloud TPU v4/v5p/v6e, Git, Linux, Docker}
+    }}
+ \end{itemize}
+
+\end{document}
